@@ -1,4 +1,5 @@
 // deno-lint-ignore-file camelcase
+import type { Sha1 } from '../../sha1.ts';
 import type { Type } from '../../type.ts';
 
 export interface Package {
@@ -24,7 +25,7 @@ export interface Package {
   },
   assetIndex : {
     id : string,
-    sha1 : string,
+    sha1 : Sha1,
     size : number,
     totalSize : number,
     url : string
@@ -33,22 +34,22 @@ export interface Package {
   complianceLevel : number,
   downloads : {
     client : {
-      sha1 : string,
+      sha1 : Sha1,
       size : number,
       url : string
     },
     client_mappings : {
-      sha1 : string,
+      sha1 : Sha1,
       size : number,
       url : string
     },
     server : {
-      sha1 : string,
+      sha1 : Sha1,
       size : number,
       url : string
     },
     server_mappings : {
-      sha1 : string,
+      sha1 : Sha1,
       size : number,
       url : string
     }
@@ -62,7 +63,7 @@ export interface Package {
     downloads : {
       artifact : {
         path : string,
-        sha1 : string,
+        sha1 : Sha1,
         size : number,
         url : string
       }
@@ -80,7 +81,7 @@ export interface Package {
       argument : string,
       file : {
         id : string,
-        sha1 : string,
+        sha1 : Sha1,
         size : number,
         url : string
       }

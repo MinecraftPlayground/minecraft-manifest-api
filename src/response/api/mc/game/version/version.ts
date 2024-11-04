@@ -1,11 +1,11 @@
-import type { VersionType } from './version_type.ts';
+import type { Type } from '../../../type.ts';
 
 export interface Version {
   id : string,
-  type : VersionType,
+  type : Type,
   url : string,
   time : string,
   releaseTime : string,
   sha1 : string,
-  complianceLevel : number
+  compienceLevel : number
 }
